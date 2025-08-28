@@ -71,3 +71,15 @@ h1, h2, h3 {
     color: #888;
     font-size: 0.9em;
 }
+
+.about-section {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
