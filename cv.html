@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="https://csdwren.github.io/style.css">
 	<link rel="stylesheet" type="text/css" href="https://csdwren.github.io/syntax.css">
+    <!-- <link rel="stylesheet" href="assets/css/blog.css"> -->
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -14,8 +15,37 @@
 	  ga('create', 'UA-64753931-1', 'auto');
 	  ga('send', 'pageview');
 	</script>
+    <style>
+        .main-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+			margin-bottom: -35px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+        .main-nav a {
+            font-size: 1.3em;
+        }
+    </style>
 </head>
 <body>
+	<nav class="main-nav">
+        <a href="/" class="nav-brand">Jinghao Zhang</a>
+        <!-- <a href="/" class="nav-brand">Home</a> -->
+        <div class="nav-links">
+            <!-- <a href="/">Home</a> -->
+            <a href="/cv.html">About</a>
+            <a href="/#section-1">Papers</a>
+            <a href="/blog.html">Blog</a>
+        </div>
+    </nav>
+	<hr class="nav-separator">
 	
 	<div class="container">
 
@@ -23,7 +53,7 @@
 	    <table>
         <tr>
             <td style="vertical-align: top; padding-right: 20px;">
-                <img src="./imgs/i.png" alt="Jinghao Zhang" style="max-width: 150px;">
+                <img src="./imgs/i.png" alt="Jinghao Zhang" style="max-width: 200px;">
             </td>
             <td style="vertical-align: top;">
                 <h2 id="name" class="cv-name" style="font-family: Georgia, serif;">Jinghao Zhang (张景皓)</h2>
