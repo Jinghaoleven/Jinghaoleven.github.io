@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="https://csdwren.github.io/style.css">
 	<link rel="stylesheet" type="text/css" href="https://csdwren.github.io/syntax.css">
     <!-- <link rel="stylesheet" href="assets/css/blog.css"> -->
+    <link rel="stylesheet" href="assets/css/dark.css">
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -32,9 +33,25 @@
         .main-nav a {
             font-size: 1.3em;
         }
+        .dark-mode-toggle {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        .dark-mode-toggle .moon {
+            display: none;
+        }
+        body.dark-mode .dark-mode-toggle .sun {
+            display: none;
+        }
+        body.dark-mode .dark-mode-toggle .moon {
+            display: block;
+        }                                               
     </style>
 </head>
 <body>
+    <script src="assets/js/dark-mode.js"></script>
 	<nav class="main-nav">
         <a href="/" class="nav-brand">Jinghao Zhang</a>
         <!-- <a href="/" class="nav-brand">Home</a> -->
@@ -43,6 +60,10 @@
             <a href="/cv.html">About</a>
             <a href="/#section-1">Papers</a>
             <a href="/blog.html">Blog</a>
+            <button id="dark-mode-toggle" class="dark-mode-toggle">
+                <svg class="sun" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.92969 4.92969L6.34969 6.34969" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.6504 17.6504L19.0704 19.0704" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.92969 19.0704L6.34969 17.6504" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.6504 6.34969L19.0704 4.92969" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg class="moon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1.99994C11.4394 2.90039 11 3.9159 11 4.99994C11 8.86594 14.134 11.9999 18 11.9999C19.084 11.9999 20.0995 11.5605 21 10.9999C18.314 15.4439 13.5 17.9999 8.5 15.9999C3.5 13.9999 1.5 8.44394 4 4.99994C5.02289 3.55389 6.34343 2.5528 7.80013 2.13934" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
         </div>
     </nav>
 	<hr class="nav-separator">

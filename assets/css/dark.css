@@ -1,0 +1,61 @@
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode a {
+    color: #bb86fc;
+}
+
+body.dark-mode p a {
+    color: #bb86fc !important;
+}
+
+body.dark-mode .main-nav a, body.dark-mode .nav-brand a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .main-nav a:hover, body.dark-mode .nav-brand a:hover {
+    color: #bb86fc;
+}
+
+body.dark-mode .blog-list-item a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .blog-list-item a:hover {
+    color: #bb86fc;
+}
+
+body.dark-mode .blog-list-title {
+    color: #e0e0e0;
+}
+
+body.dark-mode .blog-list-time {
+    color: #999;
+}
+
+body.dark-mode .cv-name {
+    color: #e0e0e0;
+}
+
+body.dark-mode .cv-section-title {
+    color: #e0e0e0;
+    border-bottom-color: #333;
+}
+
+body.dark-mode .publication-list li {
+    border-bottom-color: #333;
+}
+
+body.dark-mode .container {
+    background-color: transparent;
+}
+
+body.dark-mode div {
+    background-color: transparent !important;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #e0e0e0;
+}

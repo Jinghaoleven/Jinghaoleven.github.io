@@ -84,3 +84,22 @@ h1, h2, h3 {
     max-width: 100%;
     border-radius: 8px;
 }
+
+.dark-mode-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dark-mode-toggle .moon {
+    display: none;
+}
+
+body.dark-mode .dark-mode-toggle .sun {
+    display: none;
+}
+
+body.dark-mode .dark-mode-toggle .moon {
+    display: block;
+}
