@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Blog Post</title>
+    <title>Reasoning dilemma</title>
     <link rel="stylesheet" href="../assets/css/blog.css">
 </head>
 <body>
     <a href="../blog.html">← Back to Blog</a>
-    <h1>My First Blog Post</h1>
-    <p>This is the content of my first blog post. I'm excited to share my thoughts with the world!</p>
+    <h1>Reasoning dilemma in 2025</h1>
+    <p>1. General Reward beyond Verifiable Reward → policy discriminator pretraining, principle dimension, Likelihood (expertise preference)</p>
+    <p>2. Reward system是否需要reasoning → VA到VLA → 重要的是verbal feedback可以给reflection；需要一些hard system约束policy exploration，soft system可能被policy利用hack</p>
+    <p>3. Value model → Learn value model from sparse outcome-reward, Given PRM</p>
+    <p>4. Engineering → stable & 加速收敛 →off-policy的ratio(pre_clip, GSPO, ref选择), reward reshaping (likelihood, entropy)</p>
+    <p>5. Encourage exploration beyond boundary → 在LM prior下的探索，根据prior强度不同domain有不同行为 → 限制熵变化快token的更新，重更新高熵token低熵维持，pass@k训即对于一个response不能依赖outcome reward一棍子打死 → entropy降本质reward system的粗粒度导致ignore一些模型的behavior → 细粒度的process reward or 带冗余的dense outcome reward → 熵看起来更像是一个pass@k化pass@1的indicator，要破pass@k必须依赖泛化从其他问题获得灵感但目前没有显式的机制(或许是RL的弊端只适合在单问题的competition中forward，但如果问题更大一些，比如在整个dataset上的acc也许能激励更大的智能，但面临sparse v.s. long-term high intelligence的dilemma) → 看起来纯text的exploration并不能突破boundary，需要Tool-Integrated突破</p>
+    <p>6. Unsupervised metric(熵/Likelihood/MJ/Local quality) for verification / advantage reshaping (往往更dense) / Test-Time scaling → 是依赖policy的verification system的 → </p>
+    <p>7. Thinking while Learning → RL在boundary内探索，获取新源信息成为突破bound的关键 → 思学结合交替SFT-RL or 加权的SFT-RL(metric作为加权指标) → 积累足够多的boundary后再RL压缩包括Mid-Training, or 干中学 → 本质是要获得新sight，需要其他问题的思考泛化</p>
 </body>
 </html>

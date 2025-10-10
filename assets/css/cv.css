@@ -1,0 +1,113 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 60px auto;
+    max-width: 800px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10px;
+    background-color: #fcfcfc;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.main-nav a, .nav-brand a {
+    text-decoration: none;
+    color: #444;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+.main-nav a:hover, .nav-brand a:hover {
+    color: #003d80;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-brand {
+    font-weight: bold;
+}
+
+.nav-separator {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 40px 0;
+}
+
+.cv-name {
+    font-family: Georgia, serif;
+}
+
+.cv-section-title {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.dark-mode-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dark-mode-toggle .moon {
+    display: none;
+}
+
+body.dark-mode .dark-mode-toggle .sun {
+    display: none;
+}
+
+body.dark-mode .dark-mode-toggle .moon {
+    display: block;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode a {
+    color: #bb86fc;
+}
+
+body.dark-mode .main-nav a, body.dark-mode .nav-brand a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .main-nav a:hover, body.dark-mode .nav-brand a:hover {
+    color: #bb86fc;
+}
+
+body.dark-mode .cv-name {
+    color: #e0e0e0;
+}
+
+body.dark-mode .cv-section-title {
+    color: #e0e0e0;
+    border-bottom-color: #333;
+}
+
+body.dark-mode div {
+    background-color: transparent !important;
+}
