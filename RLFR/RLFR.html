@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLFR: Extending Reinforcement Learning for LLMs with Flow Environment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- MathJax Configuration -->
+    <script type="text/javascript">
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        console.log('MathJax initial typesetting completed');
+                    });
+                }
+            },
+            options: {
+                enableMenu: false  // Disable the right-click menu
+            }
+        };
+    </script>
+    <!-- MathJax Library -->
+    <script type="text/javascript" id="MathJax-script" defer
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="title">RLFR: Extending Reinforcement Learning for LLMs with Flow Environment</h1>
+                <div class="authors">
+                    <span class="author"><a href="https://jinghaoleven.github.io">Jinghao Zhang</a><sup>1,2</sup></span>
+                    <span class="author"><a href="https://nszheng.site">Naishan Zheng</a><sup>1,3</sup></span>
+                    <span class="author"><a>Ruilin Li</a><sup>2,4</sup></span>
+                    <span class="author"><a>Dongzhou Cheng</a><sup>2,5</sup></span>
+                    <span class="author"><a>Zheming Liang</a><sup>1,2</sup></span>
+                    <span class="author"><a href="https://scholar.google.com/citations?user=r6CvuOUAAAAJ&hl=en">Feng Zhao</a><sup>1 <svg style="width: 12px; height: 12px; vertical-align: baseline; fill: currentColor;" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path></svg></sup></span>
+                    <span class="author"><a href="https://myownskyw7.github.io">Jiaqi Wang</a><sup>2 <svg style="width: 12px; height: 12px; vertical-align: baseline; fill: currentColor;" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path></svg></sup></span>
+                </div>
+                <div class="affiliations">
+                    <p><sup>1</sup>University of Science and Technology of China &nbsp;&nbsp; <sup>2</sup>Shanghai Innovation Institute &nbsp;&nbsp; <sup>3</sup>ByteDance</p>
+                    <p><sup>4</sup>Wuhan University &nbsp;&nbsp; <sup>5</sup>Southeast University</p>
+                </div>
+                <div class="links">
+                    <a href="https://arxiv.org/abs" class="btn"><i class="fas fa-file-pdf"></i> Paper</a>      
+                    <a href="https://github.com/Jinghaoleven/RLFR" class="btn"><i class="fab fa-github"></i> Code</a>
+                    <!-- <a href="https://huggingface.co/collections/JingHaoZ/rlfr-68e9046eaeb8207e868a4f02" class="btn"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"alt="Hugging Face"width="16"style="vertical-align: middle; margin-right: 4px;"> Model</a> -->
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="element element-1"></div>
+                    <div class="element element-2"></div>
+                    <div class="element element-3"></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="abstract">
+            <h2>Abstract</h2>
+            <p>
+                Reinforcement Learning with Verifiable Rewards (RLVR) has recently emerged as a promising framework for improving reasoning abilities in Large Language Models (LLMs).
+                However, policy optimized with binary verification prone to overlook potential valuable exploration in reasoning trajectory.
+                In view of heavy annotation cost of golden Process Reward Models (PRMs), recent works attempt using auxiliary signals for reward shaping of process tokens, involving entropy and likelihood collected from logit space.
+                In this work, we offer a novel perspective on shaping RLVR with flow rewards derived from latent space, and propose RLFR, where the flow fields of model latents are constructed from either off-policy high-quality data and on-policy rejection sampling data, and the velocity deviations of policy latents within it are quantified to serve as a reward signal.
+                RLFR first demonstrates that a well-established flow field can be a sound environment for reward signal collection, highlighting the expressive latent space is much underexplored.
+                Moreover, RLFR is able to compress any off-policy expert data as reference for constituting reward signals, and we show that the practical execute tokens are prefered by flow reward rather than connection tokens.
+                Experiments on both language and multimodal reasoning benchmarks demonstrate the flow reliability, suggesting a promising paradigm for reward shaping with auxiliary signals.
+            </p>
+        </section>
+
+        <section class="method-overview">
+            <h2>Overview</h2>
+            <div class="overview-content">
+                <div class="method-figure">
+                    <img src="assets/RLFR.png" alt="Teaser" class="responsive-img">
+                    <p class="caption">
+                        <strong>(a)</strong> Policy optimized with RLVR resistant to reward hacking, but prone to overlook potential valuable explorations in reasoning trajectories. <strong>(b)</strong> Auxiliary signals are used for reward shaping of process tokens, involving entropy and likelihood collected from logit space, 
+                        where self-policy rewarding risks are non-negligible. <strong>(c)</strong> RLFR shows that the a well established flow field can be a sound environment for
+                        reward utilization.
+                </div>
+                <div class="overview-text">
+                    <p>
+                        Our approach offers a novel perspective on shaping RLVR with flow rewards derived from latent space, and thus extends RLVR with latent rewards utilization,
+                        highlighting the much underexplored yet highly expressive latent space and the sound flow environment.
+                    </p>
+                    <div class="highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-bullseye"></i>
+                            <span><strong>Flow Environment Rewarding</strong> A well-established flow field can be a sound reward environment</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span><strong>Expert Reference</strong> Consistituting reward with expert data collected from anywhere</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-book"></i>
+                            <span><strong>Theoretical Analysis</strong> Proven connection between velocity deviaiton and probability likelihood
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="method-details">
+            <h2>Method</h2>
+
+            <div class="method-section-1">
+                <h3><i class="fas fa-cogs"></i> RLFR </h3>
+                <p>
+                   <!-- RLFR leverages the expressive latent space of LLMs with flow reward and thus extending RLVR with latent rewards utilization. -->
+                   RLFR constructs flow fields of policy latents from either off-policy 
+                   high-quality data and on-policy rejection sampling data, and the velocity deviations of policy latents
+                   within it are quantified to serve as a reward signal.
+                </p>
+
+                <div class="pipeline-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Flow Reward from Velocity Deviation</h4>
+                            <p> Instead of using predicted velocity to reverse forward process for distribution
+                                generation, the accuracy of velocity prediction can serve as a sensible metric to evaluate whether
+                                current samples are within the data distribution formed by flow.
+                                We further provide the timestep debiasing approach, suggesting the larger timesteps with less noises are
+                                favorable in flow rewards for velocity evaluation.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Extending RLVR with Flow Reward</h4>
+                            <p> We use advantge shaping to make it more flexible for different RLVR algorithms. The noisy fluctuation of flow rewards are discarded  and only the substantial deviations are preserved.  
+                                The flow are online updated with rejection-sampling data throughout policy optimization, where the metrics are manageable to direct the constitution of flow reference for reward calculation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="method-section">
+                <h3><i class="fas fa-square-root-variable"></i> Flow Reward</h3>
+                <p>
+                    The flow rewards are derived from velocity deviaitons of policy latents under reference flow field and we have:
+                </p>
+                <div class="equation">
+                    $$\mathcal{R}_{\text{FM}}^{\phi}(\dot{\mathbf{a}}_k; t,\tau) =  \| \mathbf{v}_{\phi}(\dot{\mathbf{a}}_{k,t}, t) - (\dot{\mathbf{a}}_{k,1} - \epsilon) \|^2, \quad \text{where} \; t,\tau  \sim \mathcal{U}[0, 1], \;\epsilon \sim \mathcal N(0,I)$$
+                </div>
+                <p>
+                    where $\dot{\mathbf{a}}_k$ denotes latents of token $\mathbf{a}_k$, and $\dot{\mathbf{a}}_{k,t}$ is the linear interpolation between $\dot{\mathbf{a}}_{k}$ and noise $\epsilon$.
+                    The flow network $\mathbf{v}_{\phi}$ is first pre-trained on off-policy high-quality data to establish the reference distribution for offline start, and then online updated with policy. 
+                </p>
+            </div>
+
+            <div class="method-section">
+                <h3><i class="fas fa-calculator"></i> Extending RLVR with Flow Reward </h3>
+                <p>
+                    We shape advantage term $\hat{A}_{o}$ of RLVR for each token $\mathbf{a}_{k}$ by the accumulation of post-processed flow rewards $r^{\mathbf{v_\phi}}_{k}$:
+                </p>
+                <div class="equation">
+                    $$\hat{A}_{k} = \sum_{s=k}^{|\mathbf{a}|}\gamma^{s-k}r^{\mathbf{v}_{\phi}}_{s}\; + \hat{A}_{o},\\
+                    \quad\quad  r^{\mathbf{v_\phi}}_{k} = -\beta \cdot\hat{r}^{\mathbf{v_\phi}}_{k}\mathbb{I}[|{\hat{r}^{\mathbf{v}_{\phi}}_{k}|>\eta}],
+                    \quad\quad \text{where} \;
+                    \hat{r}^{\mathbf{v_\phi}}_{k}=
+                    \mathrm{minmax}(\{\mathcal{R}_{FM}^{\phi}(\dot{\mathbf{a}}_k);\mathcal{T},\mathcal{L}\}_{k=1}^{|\mathbf{a}|}),$$
+                </div>
+                <p>
+                    where $\mathbb{I}[\cdot]$ is the indicator function that discards noisy fluctuations in flow rewards and preserves only substantial deviations above $\eta$.
+                    The $\mathrm{minmax}$-$\mathrm{norm}$ is performed within the sequence to regularize the numerical values between $[-1,1]$. 
+                    $\mathcal{T}$ and $\mathcal{L}$ are collections of timesteps and layers used to calculate the velocity deviations,
+                    and we practically condition on $\hat{\mathbf{a}}_{k+1}$ to establish context dependence for flow rewards.              
+                </p>
+            </div>
+        </section>
+
+
+        <section class="results">
+            <h2>Benchmark Results</h2>
+
+            <div class="results-content">
+                <div class="result-category">
+                    <h3><i class="fas fa-chart-line"></i> Language Results</h3>
+
+
+                    <div class="language-results">
+                        <div class="method-figure">
+                            <img src="assets/Language.png" alt="Teaser" class="responsive-img">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="result-category">
+                    <h3><i class="fas fa-images"></i> Multimodal Results</h3>
+
+                    <div class="language-results">
+                        <div class="method-figure">
+                            <img src="assets/Multimodal.png" alt="Teaser" class="responsive-img">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="results">
+            <h2>Takeaways</h2>
+            <div class="table-notes">
+                <ul>
+                    <li><strong>Flow rewards prefer tokens that practically execute the question,</strong> and depress tokens with empty content such as connection tokens</li>
+                    <li><strong>High entropy in logit space makes larger velocity deviations in latent space,</strong> attributing to the ambiguity hidden states correspond to a large set of candidate tokens</li>
+                    <li><strong>Flow rewards rely on efficient context dependence compressed within the hidden states,</strong> rather than individual token-level denotation for context comprehending</li>
+                </ul>
+            </div>
+            
+
+        </section>
+
+        <section class="bibtex" id="bibtex">
+            <h2>Citation</h2>
+            <div class="bibtex-container">
+             <pre><code>@misc{zhang2025rlfr,
+    title={RLFR: Extending Reinforcement Learning for LLMs with Flow Environment},
+    author={Zhang, Jinghao and Zheng, Naishan and Li, Ruilin and Cheng, Dongzhou and Luo, Ping},
+    year={2025},
+    url={https://arxiv.org/abs/2506.05260}
+    }</code></pre>
+                <button class="copy-btn" onclick="copyBibtex()">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
