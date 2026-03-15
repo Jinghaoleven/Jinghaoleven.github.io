@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinghao Zhang | Homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Source+Serif+4:opsz,wght@10..80,400;10..80,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+  <div class="bg-shell">
+    <div class="bg-ring ring-1"></div>
+    <div class="bg-ring ring-2"></div>
+    <div class="bg-ring ring-3"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="logo">Jinghao Zhang's Homepage</div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#honors">Honors</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" aria-label="Toggle theme">Light</button>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-visual">
+        <div class="avatar">
+          <img src="assets/portrait.png" alt="Portrait of Zhang Jinghao" loading="lazy">
+          <div class="avatar-border"></div>
+        </div>
+      </div>
+      <div class="hero-text">
+        <h1>Jinghao Zhang</h1>
+        <div class="meta">
+          <span>Ph.D. Student · Universiy of Science and Technolofy of China &</span>
+          <span>Shanghai Innovation Institute</span>
+          <span>Large Reasoning Models · RL Algorithms · Multimodal Models</span>
+        </div>
+        <div class="action-row">
+          <a class="btn primary" href="mailto:jhaozhang@mail.ustc.edu.cn">Email me</a>
+          <a class="btn ghost" href="https://github.com/Jinghaoleven" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn ghost" href="https://scholar.google.com/citations?user=Lis9e2MAAAAJ&hl=zh-CN&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a class="btn ghost" href="#">CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head">
+        <p class="kicker">About</p>
+        <h2>Bio</h2>
+      </div>
+      <div class="section-body two-col">
+        <p>
+          My name is <strong>Jinghao Zhang (张景皓)</strong>. I am now a Ph.D. student in University of Science and Technology of China & Shanghai Innovation Institute, advised by <a href="https://auto.ustc.edu.cn/2021/0510/c25976a484874/page.htm">Prof. Feng Zhao</a>, and co-advised by <a href="https://myownskyw7.github.io/#">Jiaqi Wang</a>. My current research interests include LLM post-training and reinforcement learning. And previously,
+        </p>
+        <p>
+          I worked in computer vision, especially generative models and low-level vision tasks. I obtained my Bachelor degree from the School of Electronic Engineering at XiDian University in 2021, advised by <a href="https://web.xidian.edu.cn/zhengzk/">Prof. Zhekun Zheng</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- <section id="news" class="section">
+      <div class="section-head">
+        <p class="kicker">Updates</p>
+        <h2>News</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <p class="time">2024</p>
+          <p class="title">AnyLogo preprint on subject-driven diffusion released (ArXiv 2024).</p>
+        </article>
+        <article class="timeline-item">
+          <p class="time">2024</p>
+          <p class="title">ECCV 2024 paper on semantic latent space for diffusion-based dehazing accepted.</p>
+        </article>
+        <article class="timeline-item">
+          <p class="time">2023</p>
+          <p class="title">CVPR 2023 and NeurIPS 2023 works on image restoration and enhancement published.</p>
+        </article>
+      </div>
+    </section> -->
+
+    <section id="publications" class="section">
+      <div class="section-head">
+        <p class="kicker">Selected</p>
+        <h2>Publications</h2>
+      </div>
+      <div class="pub-list">
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">ArXiv 2025</p>
+            <h3>RLFR: Extending Reinforcement Learning for LLMs with Flow Environment</h3>
+            <p class="authors"><strong>Jinghao Zhang</strong>, Naishan Zheng, Ruilin Li, Dongzhou Cheng, Zheming Liang, Feng Zhao, Jiaqi Wang</p>
+            <div class="links">
+              <a href="https://arxiv.org/pdf/2510.10201">PDF</a>
+              <a href="https://github.com/Jinghaoleven/RLFR">Code</a>
+              <a href="https://jinghaoleven.github.io/RLFR/">Project Page</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/RLFR.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">ArXiv 2025</p>
+            <h3>EtCon: Edit-then-Consolidate for Reliable Knowledge Editing</h3>
+            <p class="authors">Ruilin Li, Yibin Wang, Wenhong Zhu, Chenglin Li, <strong>Jinghao Zhang</strong>, Chenliang Li, Junchi Yan, Jiaqi Wang</p>
+            <div class="links">
+              <a href="https://arxiv.org/pdf/2512.04753v1">PDF</a>
+              <a href="https://github.com/RlinL/EtCon">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/EtCon.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">ArXiv 2025</p>
+            <h3>Group Critical-token Policy Optimization for Autoregressive Image Generation</h3>
+            <p class="authors">Guohui Zhang, Hu Yu, Xiaoxiao Ma, <strong>Jinghao Zhang</strong>, Yaning Pan, Mingde Yao, Jie Xiao, Linjiang Huang, Feng Zhao</p>
+            <div class="links">
+              <a href="https://arxiv.org/pdf/2509.22485">PDF</a>
+              <a href="https://github.com/zghhui/GCPO">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/GCPO.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">ArXiv 2024</p>
+            <h3>AnyLogo: Symbiotic Subject-Driven Diffusion System with Gemini Status</h3>
+            <p class="authors"><strong>Jinghao Zhang</strong>, Wen Qian, Hao Luo, Fan Wang, Feng Zhao</p>
+            <div class="links">
+              <a href="https://arxiv.org/pdf/2409.17740">PDF</a>
+              <a href="#">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/AnyLogo.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">ECCV 2024</p>
+            <h3>Unleashing the Potential of the Semantic Latent Space in Diffusion Models for Image Dehazing</h3>
+            <p class="authors">Zizheng Yang, Hu Yu, Bing Li, <strong>Jinghao Zhang</strong>, Jie Huang, Feng Zhao</p>
+            <div class="links">
+              <a href="https://arxiv.org/pdf/2509.20091">PDF</a>
+              <a href="#">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/Unleashing.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">ArXiv 2024</p>
+            <h3>Prototype Clustered Diffusion Models for Versatile Inverse Problems</h3>
+            <p class="authors"><strong>Jinghao Zhang</strong>, Zizheng Yang, Qi Zhu, Feng Zhao</p>
+            <div class="links">
+              <a href="https://arxiv.org/pdf/2407.09768">PDF</a>
+              <a href="#">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/Prototype.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">ArXiv 2023</p>
+            <h3>Decomposition Ascribed Synergistic Learning for Unified Image Restoration</h3>
+            <p class="authors"><strong>Jinghao Zhang</strong>, Feng Zhao</p>
+            <div class="links">
+              <a href="https://arxiv.org/pdf/2308.00759">PDF</a>
+              <a href="#">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/DASL.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">CVPR 2023</p>
+            <h3>Ingredient-oriented Multi-Degradation Learning for Image Restoration</h3>
+            <p class="authors"><strong>Jinghao Zhang</strong>, Jie Huang, Mingde Yao, Zizheng Yang, Hu Yu, Man Zhou, Feng Zhao</p>
+            <div class="links">
+              <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Zhang_Ingredient-Oriented_Multi-Degradation_Learning_for_Image_Restoration_CVPR_2023_paper.pdf">PDF</a>
+              <a href="https://github.com/Jinghaoleven/IDR-Ingredients-oriented-Degradation-Reformulation">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/IDR.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">CVPR 2023</p>
+            <h3>Visual Recognition-Driven Image Restoration for Multiple Degradation with Intrinsic Semantics Recovery</h3>
+            <p class="authors">Zizheng Yang, Jie Huang, Jiahao Chang, Man Zhou, Hu Yu, <strong>Jinghao Zhang</strong>, Feng Zhao</p>
+            <div class="links">
+              <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Yang_Visual_Recognition-Driven_Image_Restoration_for_Multiple_Degradation_With_Intrinsic_Semantics_CVPR_2023_paper.pdf">PDF</a>
+              <a href="#">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/VRD-IR.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">NeurIPS 2023</p>
+            <h3>Transition-constant Normalization for Image Enhancement</h3>
+            <p class="authors">Jie Huang, Man Zhou, <strong>Jinghao Zhang</strong>, Gang Yang, Mingde Yao, Chongyi Li, Zhiwei Xiong, Feng Zhao</p>
+            <div class="links">
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/4163873c9ad623a87989d0a6eefe9442-Paper-Conference.pdf">PDF</a>
+              <a href="#">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/TCN.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">TCSVT 2023</p>
+            <h3>Learning Spatio-temporal Sharpness Map for Video Deblurring</h3>
+            <p class="authors">Qi Zhu, Naishan Zheng, Jie Huang, Man Zhou, <strong>Jinghao Zhang</strong>, Feng Zhao</p>
+            <div class="links">
+              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10286868">PDF</a>
+              <a href="#">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/STSM.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">ECCV 2022 (Oral)</p>
+            <h3>Deep Fourier-based Exposure Correction Network with Spatial-Frequency Interaction</h3>
+            <p class="authors">Jie Huang, Yajing Liu, Feng Zhao, Keyu Yan, <strong>Jinghao Zhang</strong>, Yukun Huang, Man Zhou, Zhiwei Xiong</p>
+            <div class="links">
+              <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136790159.pdf">PDF</a>
+              <a href="#">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/FECNet.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-content">
+            <p class="venue">ACM MM 2022</p>
+            <h3>Structure- and Texture-Aware Learning for Low-Light Image Enhancement</h3>
+            <p class="authors"><strong>Jinghao Zhang</strong>, Jie Huang, Mingde Yao, Man Zhou, Feng Zhao</p>
+            <div class="links">
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3503161.3548359">PDF</a>
+              <a href="#">Code</a>
+          </div>
+          </div>
+          <a class="pub-thumb" href="#" aria-label="Open publication thumbnail">
+            <img src="assets/thumb/STAN.png" alt="AnyLogo illustration">
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-head">
+        <p class="kicker">Research</p>
+        <h2>Experience</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-icon">
+            <img src="assets/JD.png" alt="USTC logo">
+          </div>
+          <div class="content">
+            <p class="time">Oct. 2025 — Present</p>
+            <p class="title"><strong>Research Intern</strong>, JD Explore Academy</p>
+            <!-- <p class="sub">Topic: VLM Post-training · Mentor: Jiaqi Wang</p> -->
+            <p class="sub">Topic: VLM Post-training</p>
+            <p class="sub">Shanghai, China</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-icon">
+            <img src="assets/DAMO.png.webp" alt="DAMO Academy logo">
+          </div>
+          <div class="content">
+            <p class="time">Nov. 2023 — Aug. 2024 </p>
+            <p class="title"><strong>Research Intern</strong>, DAMO Academy, Alibaba</p>
+            <!-- <p class="sub">Topic: Visual generative models · Mentor: Hao Luo</p> -->
+            <p class="sub">Topic: Visual generative models</p>
+            <p class="sub">Hangzhou, China</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="honors" class="section honors-section">
+      <div class="section-head">
+        <p class="kicker">Recognition</p>
+        <h2>Honors & Awards</h2>
+      </div>
+      <div class="section-body two-col">
+        <p>National Scholarship, 2023</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-head">
+        <p class="kicker">Contact</p>
+        <h2>Get in touch</h2>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <p class="with-icon" data-icon="📧">Email</p>
+          <div class="links">
+            <a href="mailto:jhaozhang@mail.ustc.edu.cn">jhaozhang@mail.ustc.edu.cn</a><br>
+          </div>
+        </div>
+        <div>
+          <p class="with-icon" data-icon="📍">Location</p>
+          <p>31.2304° N, 121.4737° E · Shanghai, China</p>
+        </div>
+        <div>
+          <p class="with-icon" data-icon="🔗">Links</p>
+          <div class="links">
+            <a href="https://github.com/Jinghaoleven" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=Lis9e2MAAAAJ&hl=zh-CN&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="#">CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="inline-stats">
+      <div class="stat-pill">
+        <span class="pill-icon">👁️</span>
+        <span class="pill-label">Total visits</span>
+        <span class="pill-count" id="visit-total">--</span>
+        <span class="pill-suffix">times</span>
+      </div>
+      <div class="stat-pill">
+        <span class="pill-icon">👥</span>
+        <span class="pill-label">Visitors</span>
+        <span class="pill-count" id="visitor-count">--</span>
+        <span class="pill-suffix">people</span>
+      </div>
+    </div>
+  </main>
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+    <button class="lightbox-close" aria-label="Close">Close</button>
+    <img src="" alt="Publication preview">
+  </div>
+  <script>
+    (function () {
+      const body = document.body;
+      const button = document.querySelector('.theme-toggle');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const saved = localStorage.getItem('theme');
+      const initial = saved || (prefersDark ? 'dark' : 'light');
+      setTheme(initial);
+
+      button.addEventListener('click', () => {
+        const next = body.dataset.theme === 'dark' ? 'light' : 'dark';
+        setTheme(next);
+        localStorage.setItem('theme', next);
+      });
+
+      function setTheme(mode) {
+        body.dataset.theme = mode;
+        button.textContent = mode === 'dark' ? 'Dark' : 'Light';
+      }
+    })();
+
+    (function () {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+      const closeBtn = lightbox.querySelector('.lightbox-close');
+
+      document.querySelectorAll('.pub-thumb').forEach((thumb) => {
+        thumb.addEventListener('click', (e) => {
+          e.preventDefault();
+          const img = thumb.querySelector('img');
+          const src = thumb.dataset.full || (img && img.src);
+          if (!src) return;
+          lightboxImg.src = src;
+          lightbox.classList.add('is-open');
+        });
+      });
+
+      const close = () => {
+        lightbox.classList.remove('is-open');
+        lightboxImg.src = '';
+      };
+
+      closeBtn.addEventListener('click', close);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) close();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+      });
+    })();
+
+    (function () {
+      const totalEl = document.getElementById('visit-total');
+      const uniqEl = document.getElementById('visitor-count');
+      const inlineStats = document.querySelector('.inline-stats');
+      const endpoint = 'https://api.countapi.xyz/hit/jinghaoleven.github.io/visits';
+      const SHOW_THRESHOLD = 1000;
+
+      fetch(endpoint)
+        .then((res) => res.json())
+        .then((data) => {
+          const val = data && typeof data.value === 'number' ? data.value : null;
+          if (val !== null) {
+            totalEl.textContent = val.toLocaleString();
+            uniqEl.textContent = val.toLocaleString();
+            if (val >= SHOW_THRESHOLD && inlineStats) {
+              inlineStats.style.display = 'flex';
+            }
+          } else {
+            totalEl.textContent = uniqEl.textContent = 'N/A';
+          }
+        })
+        .catch(() => {
+          totalEl.textContent = uniqEl.textContent = 'N/A';
+        });
+    })();
+  </script>
+</body>
+</html>
