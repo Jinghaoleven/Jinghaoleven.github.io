@@ -17,11 +17,12 @@ The existing research-interest list remains immediately below this block, so the
 
 - Remove the existing hero sentence beginning “I study how foundation models learn after pre-training”.
 - Update the About sidebar internship value to `TGT Program · JD Explore Academy`.
-- Update the current Experience entry title to `TGT Program Research Intern · JD Explore Academy`.
-- Preserve the existing dates, location, topic, visual styling, and all unrelated content.
+- Leave the Experience section unchanged.
+- Preserve the existing dates, location, topic, visual styling, and all other unrelated content.
 
 ## Validation
 
 - Confirm the removed sentence no longer appears.
-- Confirm all three current-status references use the TGT Program wording consistently.
+- Confirm the hero and About sidebar use the approved TGT Program wording.
+- Confirm the Experience section has not changed.
 - Confirm local references, inline JavaScript, and CSS remain valid.
